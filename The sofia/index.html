@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a Sofia</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        .heart-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart-button::before,
+        .heart-button::after {
+            content: '';
+            position: absolute;
+            background-color: red;
+            width: 100px;
+            height: 150px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+        }
+
+        .heart-button::after {
+            left: 50px;
+            transform: rotate(45deg);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .heart-button:hover {
+            animation-play-state: paused;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 style="color: aliceblue; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Sofia
+        toque no <strong style="color: red;">coração</strong></h1>
+    <button class="heart-button" onclick="alert('Maravilhosa!')"></button>
+
+    <script>
+        // Opcional: Você pode adicionar JavaScript aqui para fazer algo quando o coração for clicado.
+        // Por exemplo, a linha acima já mostra um pop-up.
+    </script>
+</body>
+
+</html>
